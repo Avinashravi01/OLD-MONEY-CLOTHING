@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leather Loafers - Product Details</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f0e3;
+            color: #4f3621;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        #product-details {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .product-image img {
+            width: 350px;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            max-width: 500px;
+        }
+
+        .product-info h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .product-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .product-info .size-options {
+            margin: 20px 0;
+        }
+
+        .size-options label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .size-options button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 14px;
+            background-color: #fff;
+            color: #4f3621;
+            border: 1px solid #4f3621;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .size-options button:hover {
+            background-color: #4f3621;
+            color: #fff;
+        }
+
+        .product-price {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .buy-now {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #4f3621;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .buy-now:hover {
+            background-color: #74543a;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #74543a;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Leather Loafers</h1>
+    </header>
+
+    <section id="product-details">
+        <!-- Product Image -->
+        <div class="product-image">
+            <img src="Screenshot 2024-12-10 024800.png" alt="Leather Loafers">
+        </div>
+
+        <!-- Product Information -->
+        <div class="product-info">
+            <h2>Premium Quality Footwear for Elegance</h2>
+            <p>
+                The Leather Loafers are crafted from luxurious leather, offering both comfort and style. Their sleek design makes them a perfect addition to both formal and casual outfits. The premium quality leather ensures durability, making them a long-lasting choice for any wardrobe.
+            </p>
+            <div class="size-options">
+                <label for="sizes">Select Size:</label>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>10</button>
+            </div>
+            <p class="product-price">Price: $179.99</p>
+            <button class="buy-now">Buy Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Back to <a href="index.html">Home</a></p>
+    </footer>
+</body>
+</html>

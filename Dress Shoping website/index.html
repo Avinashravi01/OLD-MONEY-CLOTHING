@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Old Money</title>
+  <style>
+ #blog {
+  background-image: url(Screenshot\ 2024-12-10\ 153434.jpg); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color:  #FFE9C7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.blog-h1{
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  margin-bottom: 30%;
+  color: rgb(255, 255, 255);
+
+    padding: 20px;
+    line-height: 1.6; /* Adjust line spacing */
+    max-width: 90%; /* Optional: Restrict width for better readability */
+    margin: auto; /* Center align the text */
+}
+
+    .bg {
+      position: absolute; 
+      top: 0;
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      background-image: url(image.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: grayscale(70%);
+      filter: brightness(30%);
+      filter: opacity(40%);
+      z-index: -1; 
+    }
+
+    body {
+      margin: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: #FFE9C7;
+      scroll-behavior: smooth;
+    }
+    .img{
+      width: 40px;
+      height: 50px;
+     
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #4f3621;
+      z-index: 1000;
+      display: flex;
+      justify-content:left;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      margin: 0;
+      padding: 0;
+      gap: 30px;
+    }
+
+    nav ul li {
+      display: inline-flex;
+    }
+   
+
+    nav ul li a {
+      display: block;
+      color: rgb(255, 229, 179);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      border-radius: 40px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #fafafa8a;
+      transform: scale(1.1); 
+    }
+    .dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.46);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:#4f3621;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: rgb(255, 229, 179);
+  padding: 12px 16px;
+  text-decoration:none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #dddddd69;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-left: 700px;
+  
+}
+
+.search-bar input {
+  padding: 8px 10px;
+  
+  border-radius: 8px;
+  font-size: 14px;
+}
+.search-bar button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #4f3621;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s , transform 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #a6a6a68f;
+  transform: scale(1.1);
+}
+
+    section {
+      padding: 100px 20px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    #intro {
+      color: rgb(67, 32, 11);
+    }
+
+    .info {
+      padding-left: 200px;
+      font-size: larger;
+    }
+
+    .typing-effect {
+      padding-left: 200px;
+      color: rgb(67, 32, 11);
+      overflow: hidden;
+      border-right: 0.10em solid rgb(102, 59, 10);
+      white-space: nowrap;
+      animation: typing 3s steps(10, end);
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 25%; }
+    }
+
+    .p {
+      font-family: 'Trebuchet MS', Arial, sans-serif;
+      padding-left: 200px;
+      font-size: 14px;
+      font-weight: bold;
+      animation: blink 8s 2;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      padding: 1.3em;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+      color: #301b0a;
+      background-color: #fff;
+      border: none;
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      outline: none;
+      position: relative;
+    }
+    button{
+      position: relative;
+      left: 13%;
+    }
+
+    button:hover {
+      background-color: rgb(123, 60, 21);
+      color: #fff;
+      transform: translateY(-7px);
+    }
+
+    button:active {
+      transform: translateY(-1px);
+    }
+
+    #shop-now-btn {
+      margin-top: 20px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 40px;
+      background-color: #4f3621;
+
+    }
+
+    .item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+
+    .item img {
+      width: 275px;
+      height: 300px;
+      display: flex;
+      position: relative;
+    }
+
+    .content {
+      position: absolute;
+      bottom: 20px;
+      top: auto;
+      left: 200px;
+      color: #ffffff;
+    }
+
+    .content h2 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .content p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .content button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #000000;
+      background-color: #fefefe;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      text-transform: uppercase;
+      transition: background-color 0.3s;
+    }
+
+    .content button:hover {
+      background-color: #cbcaca;
+    }
+    .model2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    padding: 40px;
+    background-color:transparent;
+  }
+  
+  .model2 .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .model2 .item img {
+    width: 250px;
+    height: 270px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .model2 .item img:hover {
+    transform: scale(1.05);
+  }
+  
+  .model2 .description p {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    color: #4f3621;
+    margin-bottom: 10px;
+  }
+  
+  .model2 .shop-now {
+    display: inline-block;
+  text-decoration: none;
+  background-color: #4f3621;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .model2 .shop-now:hover {
+    background-color: #74543a;
+    transform: scale(1.1);
+  }
+    .para{
+      background-image: url(Screenshot\ 2024-12-10\ 141419.png);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.footer {
+  
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px;
+    background-color: #74543a;
+    color: #ffffff;
+    border-top: 1px solid #e5e5e5;
+    position: relative;
+    width: 100%;
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer__logo {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #ffffff;
+}
+
+.footer__btn{
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #000000;
+      background-color: #fefefe;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      text-transform: uppercase;
+      transition: background-color 0.3s;
+    }
+
+    .footer__btn:hover {
+      background-color: #cbcaca;
+    }
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: #ffffff;
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: #ffffff;
+}
+  
+.legal__links {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  color: #2f2f2f;
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+.blog-h1{
+  margin: 0;
+  padding: 1%;
+  margin-top: 30%;
+}
+
+    
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <nav>
+    <ul>
+      <li class="img"><img src="Screenshot_2024-12-10_032455-removebg-preview.png" alt="logo" >
+      <li><a href="#intro">Home</a></li>
+      <li><a href="#page">Pages</a></li>
+      <li ><a href="#blog">Blog</a></li>
+      <div class="dropdown">
+        <li class="dropbtn"><a href="#Shop">Shop</a>
+          <i class="fa fa-caret-down"></i>
+        </li>
+        <div class="dropdown-content">
+          <a href="#">Shirt</a>
+          <a href="#">T-shirt</a>
+          <a href="#">Pant</a>
+        </div>
+    </ul>
+    <div class="search-bar">
+      <input type="text" placeholder="search ">
+      <button type="submit" style="color: rgb(255, 229, 179);">Search</button>
+    </div>
+  </nav>
+ 
+  <section id="intro">
+    <div class="info">
+      <h1 style="font-family: Trebuchet MS;">UPGRADE YOUR</h1>
+      <h1 style="font-family: Trebuchet MS;">STYLES WITH</h1>
+    </div>
+    <div class="typing-effect">
+      <h1 style="font-family: Trebuchet MS;">OLD MONEY AESTHETICS</h1>
+    </div>
+    <p class="p">
+      "Timeless elegance meets refined craftsmanship in our collection of old money-inspired clothing<br>
+      designed for those who appreciate understated luxury.<br>
+      Elevate your wardrobe with pieces that exude sophistication and heritage."
+    </p>
+    <button id="shop-now-btn">SHOP NOW</button>
+  </section>
+  <div class="container">
+    <div class="item">
+      <img src="Screenshot 2024-12-10 005723.png" alt="Clothing">
+      <div class="content">
+        <h2>TRENDING POLOS</h2>
+        <button>Shop Now</button>
+      </div>
+    </div>
+    <div class="item">
+      <img src="Screenshot 2024-12-10 005542.png" alt="Accessories">
+      <div class="content">
+        <h2>BUSINESS CASUALS</h2>
+        <button>Shop Now</button>
+      </div>
+    </div>
+    <div class="item">
+      <img src="Screenshot 2024-12-10 010008.png" alt="Shoes">
+      <div class="content">
+        <h2>OFFICE FORMALS</h2>
+        <button>Shop Now</button>
+      </div>
+    </div>
+  </div>
+  <section id="shop">
+    <h2 style="text-align: center; font-size: 2rem; color: #4f3621;">Shop Our Collection</h2>
+    <p style="text-align: center; color: #4f3621;">Explore a curated selection of timeless styles and refined craftsmanship.</p>
+    <div class="model2">
+      <div class="item">
+        <img src="Screenshot 2024-12-10 040317.png"alt="Classic Blazer">
+        <div class="description">
+          <p>Classic Blazer - Timeless style for formal and semi-casual occasions.</p>
+          <a href="product1.html" class="shop-now">Shop Now</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="Screenshot 2024-12-10 040016.png" alt="Cashmere Sweater">
+        <div class="description">
+          <p>Cashmere Sweater - Ultra-soft luxury for cooler days.</p>
+          <a href="product2.html" class="shop-now">Shop Now</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="Screenshot 2024-12-10 024829.png" alt="Tailored Trousers">
+        <div class="description">
+          <p>Tailored Trousers - Perfectly crafted for a polished appearance.</p>
+          <a href="product3.html" class="shop-now">Shop Now</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="Screenshot 2024-12-10 024800.png" alt="Leather Loafers">
+        <div class="description">
+          <p>Leather Loafers - Premium quality footwear for elegance.</p>
+          <a href="product4.html" class="shop-now">Shop Now</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="Screenshot 2024-12-10 005457.png" alt="Structured Handbag">
+        <div class="description">
+          <p>Structured Handbag - Add sophistication to any outfit.</p>
+          <a href="product5.html" class="shop-now">Shop Now</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="Screenshot 2024-12-10 025108.png" alt="Silk Scarf">
+        <div class="description">
+          <p>Silk Scarf - A subtle touch of luxury for any look.</p>
+          <a href="product6.html" class="shop-now">Shop Now</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="Screenshot 2024-12-10 040152.png" alt="Tailored Overcoat">
+        <div class="description">
+          <p>Tailored Overcoat - Classic design for ultimate refinement.</p>
+          <a href="product7.html" class="shop-now">Shop Now</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="Screenshot 2024-12-10 040127.png" alt="Pearl Jewelry Set">
+        <div class="description">
+          <p>Pearl Jewelry - Timeless elegance with a minimalist touch.</p>
+          <a href="product8.html" class="shop-now">Shop Now</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="Screenshot 2024-12-10 040049.png" alt="Tweed Blazer">
+        <div class="description">
+          <p>Tweed Blazer - A heritage classic with modern tailoring.</p>
+          <a href="product9.html" class="shop-now">Shop Now</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="Screenshot 2024-12-10 025015.png" alt="Leather Watch">
+        <div class="description">
+          <p>Leather Watch - The perfect finishing touch to any ensemble.</p>
+          <a href="product10.html" class="shop-now">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pages">
+<div class="model2">
+    <p>Discover additional resources and inspiration to enhance your style.</p>
+  </section>
+
+  <section id="blog">
+    <div class="blog-h1">
+      <h1>OLD MONEY AESTHETICS</h1>
+      <p style="font-size: 26px;">Old money outfit style, often referred to as "quiet luxury" or "stealth wealth," epitomizes timeless elegance and understated sophistication. Rooted in the traditions of generational wealth, this style prioritizes quality over trendiness, with an emphasis on classic tailoring and neutral tones. Key pieces include well-fitted blazers, tailored trousers, cashmere sweaters, pearl jewelry, and loafers made from the finest leather. Fabrics like wool, silk, and tweed dominate the wardrobe, ensuring longevity and an air of refinement. Brands associated with this style are often discreet, lacking overt logos but exuding craftsmanship. The aesthetic avoids flashy displays of wealth, favoring a minimalist yet polished appearance that speaks volumes through its simplicity. Accessories are equally restrained, with items such as leather watches, structured handbags, and silk scarves adding subtle touches of luxury. This style represents an enduring ethos that values heritage, tradition, and an appreciation for the finer things without the need for ostentation.</p>
+    </div>  
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo"><img src="Screenshot_2024-12-10_032455-removebg-preview.png" alt="logo" width="60px" height="60px"></h1>
+            
+        <h2>Contact</h2>
+        
+        <h4>Dubai Main Road <br>Dubai kuruku sandhu Dubai</h4>
+              
+          <a class="footer__btn" href="mailto:example@gmail.com" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Email Us</a>
+        
+      </div>
+      
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Website</h2>
+    
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Online shopping</a>
+            </li>
+    
+            <li>
+              <a href="#">Blog</a>
+            </li>
+        
+          </ul>
+        </li>
+        
+        <li class="nav__item nav__item--extra">
+          <h2 class="nav__title"><i class="fa fa-shopping-bag" aria-hidden="true"></i></h2>
+          
+          <ul class="nav__ul nav__ul--extra">
+            <li>
+              <a href="#">Men</a>
+            </li>
+            
+            <li>
+              <a href="#">Women</a>
+            </li>
+            
+            <li>
+              <a href="#">Kids</a>
+            </li>
+            
+            <li>
+              <a href="#">Trending polo</a>
+            </li>
+            
+            <li>
+              <a href="#">All time trend</a>
+            </li>
+            
+            <li>
+              <a href="#">Kids wear</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav__item">
+          <h2 class="nav__title">Legal</h2>
+          
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+            
+            <li>
+              <a href="#">Sitemap</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div class="legal">
+        <p>&copy; 2019 Something. All rights reserved.</p>
+      </div>
+    </footer>
+  
+  </section>
+</body>
+</html>
